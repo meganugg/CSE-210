@@ -38,8 +38,20 @@ class Program
             else if(select == 2){
                 journal.display();
             }
-            else if(select == 3){}
-            else if(select == 4){}
+            else if(select == 3){
+                Console.WriteLine("Enter a file name (inlcude file extension)");
+                Console.Write("> ");
+                journal.filename = Console.ReadLine();
+                journal.save();
+                Console.WriteLine("File saved.");
+            }
+            else if(select == 4){
+                Console.WriteLine("Enter a file name (inlcude file extension)");
+                Console.Write("> ");
+                journal.filename = Console.ReadLine();
+                journal.load();
+                Console.WriteLine("File loaded.");
+            }
             else if(select == 5){}
             else{
                 Console.WriteLine("Enter a valid option.");

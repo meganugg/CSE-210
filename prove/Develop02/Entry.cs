@@ -6,6 +6,7 @@ class Entry
 public String date;
 public int prompt;
 public String entry;
+
 String[] prompts =  {"Who was the most interesting person I interacted with today?", 
                     "What was the best part of my day?",
                     "How did I see the hand of the Lord in my life today?",
@@ -21,8 +22,7 @@ public void displayPrompt(){
     Console.WriteLine($"{date} - {prompts[prompt]}");
 }
 
-public void displayEntry(){
-    Console.WriteLine($"{date} - {prompts[prompt]}");
-    Console.WriteLine(entry);
+public String displayEntry(){
+    return $"{date} - {prompts[prompt]}\n{entry}\n";
 }
 }
