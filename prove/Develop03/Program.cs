@@ -21,9 +21,8 @@ while (select != "3")
     switch (select)
     {
         case ("1"):
-            reference = "";
             Console.Clear();
-            Console.WriteLine("Example: (xxxxx n:n) or (xxxxx n:n-n)");
+            Console.WriteLine("Example: [(n) Xxxxx n:n] or [(n) Xxxxx n:n-n]");
             Console.Write("Scripture: ");
             reference = Console.ReadLine();
             Console.Clear();
@@ -35,12 +34,13 @@ while (select != "3")
                     s.memorize();
                 }
             }else{
-                Console.WriteLine("Scripture(s) not found");
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("Scripture(s) not found", Console.ForegroundColor);
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.WriteLine("Did your search follow the syntax in the example?", Console.ForegroundColor);
             }
             break;
         case ("2"):
-            reference = "";
-            scripture = "";
             Console.Clear();
             Console.Write("Reference: ");
             reference = Console.ReadLine();
@@ -58,6 +58,7 @@ while (select != "3")
             Console.WriteLine("Terminating program...");
             break;
         default:
+            Console.Clear();
             Console.WriteLine("Select a valid option");
             break;
     }

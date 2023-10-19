@@ -30,6 +30,19 @@ public class Reference{
 
     public void setReference(string r){
         _reference = r;
+        _dash = 0;
+        _colon = 0;
+        _n = 0;
+        _begin = "";
+        _end = "";
+        _finalSripture = "";
+        _packagedScripture = "";
+        _verse = "";
+        _scr.Clear();
+        _verses.Clear();
+        _beginVerse = 0;
+        _endVerse = 0;
+
     }
 
     public bool search(){
@@ -106,10 +119,19 @@ public class Reference{
                 }
             }
             //getting rid of the reference in front - it shouldn't be a part of what's shipped to "scripture"
-            _scr.RemoveAt(0);
-            _words = _scr[0].Split("\t");
-            _scr.RemoveAt(0);
-            _scr.Insert(0, _words[1]);
+            if(_scr[2].Contains(":")){
+                _scr.RemoveAt(0);
+                _scr.RemoveAt(0);
+                _words = _scr[0].Split("\t");
+                _scr.RemoveAt(0);
+                _scr.Insert(0, _words[1]);
+            }else{
+                _scr.RemoveAt(0);
+                _words = _scr[0].Split("\t");
+                _scr.RemoveAt(0);
+                _scr.Insert(0, _words[1]);
+            }
+            
             for(int i = 0; i < _scr.Count(); i++){
                 if(i != 0){
                     _packagedScripture += " ";

@@ -1,4 +1,5 @@
 using System;
+using System.Net.Quic;
 
 public class Scripture{
     private string _scripture;
@@ -27,7 +28,9 @@ public class Scripture{
         Console.Write("> ");
         _quit = Console.ReadLine();
         Console.Clear();
-        _scripture = w.setScripture(_scripture);
+        if(_quit != "quit"){
+            _scripture = w.setScripture(_scripture);
+        }
         if(w.empty() == true || _quit == "quit"){
             return true;
         }

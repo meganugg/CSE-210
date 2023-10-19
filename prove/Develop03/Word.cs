@@ -14,18 +14,23 @@ public class Word{
     }
 
     public string setScripture(string s){
+        //sets scripture to itself minus three words
         _scr = "";
         _words.Clear();
         _elements = s.Split(" ");
         for(int i = 0; i < _elements.Count(); i++){
             _words.Add(_elements[i]);
         }
+        //replace one word with blank of same length, three times
         for(int i = 0; i < 3; i++){
             _blank = "";
             _exit = false;
             _index = r.Next(0, _words.Count());
             while(_words[_index].Contains("_")){
                 _index = r.Next(0, _words.Count());
+                if(empty() == true){
+                break;
+            }
             }
             for(int j = 0; j < _words[_index].Length; j++){
                 _blank += "_";
