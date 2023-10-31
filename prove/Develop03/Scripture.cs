@@ -5,7 +5,7 @@ public class Scripture{
     private string _scripture;
     private string _reference;
     private string _quit;
-    public Word w = new Word();
+    private WordManager w = new WordManager();
 
     public Scripture(){
         _scripture = "";

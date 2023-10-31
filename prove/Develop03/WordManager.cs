@@ -1,7 +1,7 @@
 using System;
 using System.Globalization;
 
-public class Word{
+public class WordManager{
     Random r = new Random();
     private bool _exit;
     private int _index;
@@ -9,7 +9,7 @@ public class Word{
     private string _blank;
     private string[] _elements;
     private List<string> _words = new List<string>();
-    public Word(){
+    public WordManager(){
         _scr = "";
     }
 
