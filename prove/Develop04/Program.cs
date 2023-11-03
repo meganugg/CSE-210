@@ -14,7 +14,7 @@ class Program
             Console.WriteLine("Select an exercise");
             Console.WriteLine("   1. Breathing Activity");
             Console.WriteLine("   2. Reflection Activity");
-            Console.WriteLine("   3. Listening Activity");
+            Console.WriteLine("   3. Listing Activity");
             Console.WriteLine("   4. Quit");
             Console.Write("> ");
             input = Console.ReadLine();
@@ -28,14 +28,17 @@ class Program
                 case 1:
                     Console.Clear();
                     BreathingActivity breathe = new BreathingActivity();
+                    breathe.Run();
                     break;
                 case 2:
                     Console.Clear();
                     ReflectionActivity reflect = new ReflectionActivity();
+                    reflect.Run();
                     break;
                 case 3:
                     Console.Clear();
-                    ListeningActivity listen = new ListeningActivity();
+                    ListingActivity list = new ListingActivity();
+                    list.Run();
                     break;
                 default:
                     break;
