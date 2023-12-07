@@ -2,7 +2,7 @@ using System;
 
 class Run : Activity
 {
-    public Run(string dt, double dr, double d, int x, int x1) : base(dt, dr, d, x, x1){}
+    public Run(string dt, double dr, double x) : base(dt, dr, x){}
     public override double CalculateDistance(){
         return Math.Round(distance, 2);
     }

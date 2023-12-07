@@ -3,7 +3,7 @@ using System.Runtime.InteropServices;
 
 class Bike : Activity
 {
-    public Bike(string dt, double dr, double s, int x) : base(dt, dr, s, x){}
+    public Bike(string dt, double dr, double x) : base(dt, dr, x){}
     public override double CalculateDistance(){
         return Math.Round(speed*(duration/60), 2);
     }

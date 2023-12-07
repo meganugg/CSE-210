@@ -8,21 +8,14 @@ abstract class Activity
     protected double speed;
     protected double distance;
 
-    protected Activity(string dt, double dr, double l){
+    protected Activity(string dt, double dr, double x){
         date = dt;
         duration = dr;
-        laps = l;
+        laps = x;
+        speed = x;
+        distance = x;
     }
-    protected Activity(string dt, double dr, double s, int x){
-        date = dt;
-        duration = dr;
-        speed = s;
-    }
-    protected Activity(string dt, double dr, double d, int x, int x1){
-        date = dt;
-        duration = dr;
-        distance = d;
-    }
+    
     public abstract double CalculateDistance();
     public abstract double CalculateSpeed();
     public abstract double CalculatePace();
